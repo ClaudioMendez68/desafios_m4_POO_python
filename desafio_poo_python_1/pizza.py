@@ -1,3 +1,4 @@
+# Grupo 3: Juan Torres, Diego Larenas, Matías Valdivia, Claudio Méndez
 from ingredientes import vegetales, proteicos, masa
 
 class Pizza(): 
