@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-class Alternativas:
+class Alternativa:
     def __init__(self):
         self.contenido = None
         self.ayuda = None

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-class Preguntas:
+class Pregunta:
     def __init__(self):
         self.enunciado = None
         self.ayuda = None

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-class Encuestas:
+class Encuesta:
     def __init__(self):
         self.nombre = None
         self.lista_preguntas = None

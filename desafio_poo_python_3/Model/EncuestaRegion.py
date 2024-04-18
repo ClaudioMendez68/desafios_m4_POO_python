@@ -1,9 +1,9 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-from Encuestas import Encuestas
+from Encuesta import Encuesta
 
-class EncuestaRegion(Encuestas):
+class EncuestaRegion(Encuesta):
     def __init__(self):
         self.regiones = None
 

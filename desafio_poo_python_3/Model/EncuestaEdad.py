@@ -1,9 +1,9 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-from Encuestas import Encuestas
+from Encuesta import Encuesta
 
-class EncuestaEdad(Encuestas):
+class EncuestaEdad(Encuesta):
     def __init__(self):
         self.edad_minima = None
         self.edad_maxima = None
