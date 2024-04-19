@@ -19,8 +19,10 @@ class Foto():
         try:
             if ancho >= 1 and ancho <= Foto.MAX:
                 self.__ancho = ancho
-        except Exception as error:
-            raise DimensionError(f'ERROR: El ancho no puede ser mayor a {Foto.MAX}', ancho, Foto.Max)
+            else:
+                raise DimensionError(f'El ancho no puede ser mayor a {Foto.MAX}', ancho, Foto.MAX)
+        except DimensionError as error:
+            print(f'ERROR: {error.mensaje}')
     @property
     def alto(self) -> int:
         return self.__alto
@@ -28,11 +30,18 @@ class Foto():
     @alto.setter
     def alto(self, alto) -> None:
         try:
-            self.__alto = alto
-        except:
-            pass
-        
+            if alto >= 1 and alto <= Foto.MAX:
+                self.__alto = alto
+            else:
+                raise DimensionError(f'El alto no puede ser mayor a {Foto.MAX}', alto, Foto.MAX)
+        except DimensionError as error:
+            print(f'ERROR: {error.mensaje}')
+
+# TESTING
 foto_1 = Foto(2000, 2000, 'https:// ...')
 print(foto_1.ancho)
-foto_1.ancho = 2600 # setter del ancho
-print(foto_1.ancho)
+foto_1.ancho = 2300 
+foto_1.alto = 2550
+
+print(f'Ancho de la foto: {foto_1.ancho}')
+print(f'Alto de la foto: {foto_1.alto}')
