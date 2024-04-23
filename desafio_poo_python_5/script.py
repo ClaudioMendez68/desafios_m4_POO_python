@@ -18,10 +18,10 @@ with open('usuarios.txt')as usuarios:
             usuario = json.loads(linea)
             lista_usuarios.append(Usuario(usuario.get("nombre"), usuario.get("apellido"), usuario.get("email"), usuario.get("genero")))
         except json.decoder.JSONDecodeError as e:
-            log_error.write(f"[{now.strftime('%Y-%m-%d %H:%M:%S')}] ERROR: {e}\n")
+            log_error.write(f"[{now.strftime('%Y-%m-%d %H:%M:%S')}] ERROR: {e}\n")            
         finally:
             linea = usuarios.readline()
-usuarios.close()
-            
+    usuarios.close()
+log_error.close()           
 for usuario in lista_usuarios:
     print(f'{usuario.nombre}  {usuario.apellido}  {usuario.email}  {usuario.genero}')
