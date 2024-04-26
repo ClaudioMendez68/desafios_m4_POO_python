@@ -110,9 +110,6 @@ class Video(Anuncio):
     def redimensionar_anuncio(self):
         print("RECORTE DE VIDEO NO IMPLEMENTADO AÚN")
         
-    #def anuncios(self):
-    #    return Video(self.url_archivo, self.url_clic, self.sub_tipo)
-    
 class Display(Anuncio):
     FORMATO = "Display"
     SUB_TIPOS = ("tradicional", "native")
